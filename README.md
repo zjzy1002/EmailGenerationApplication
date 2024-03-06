@@ -1,29 +1,33 @@
 
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
-| Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
-| Course       | Fall / Spring / Summer     |
-| Assignment # |                            |
+| Name         | Shenxiao Li       |
+| Date         | 03/07/2024                 |
+| Course       | Spring    |
+| Assignment # | Assignment 3: Email Generation Application     |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+The project is to develop an "Email Generation" application by generating automated emails for different customer segments. To achieve this, it requires a custom application that can automatically generate
+emails based on a base template, tailored to each type of customer.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/zjzy1002/EmailGenerationApplication
 
 # Implementation Description 
 
-
 For each assignment, please answer the following:
 
-- Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.
-- Describe how you have avoided duplicated code and why it is important.
-- If applicable, mention any design patterns you have used and explain why they were
-chosen.
+- Flexibility:
+  1) When adding new or deleting a customer type: it is easy to create a class to extends 'EmailTemplate' class for different customer type or removing the email template for specific customer type, the isolation will not impact the rest of system.
+  2) It decouples the creation of email template from their applies to different types.
+- Simplicity and Understandability:
+  1) New class extends 'EmailTemplate' class will encapsulate the subject and body content, making it easy for widespread changes and maintenance.
+  2) Easy for developers to locate specific part of the system responsible for generating specific type of emails and sending emails.
+- Duplication:
+  1) By creating an EmailSenderService class, it could reduce generating a sendEmail() method for each customer type. 
+  2) Using factory pattern, it eliminates the need for repetitive create similar logic across different type of customers. 
+- Design Pattern:
+  I chose factory pattern to realize the functions. Since it encapsulate the logic of email templates, but allow the flexibility for different customers when creating objects.This helps create objects separately from the core logic.
 
 
 # Maven Commands
