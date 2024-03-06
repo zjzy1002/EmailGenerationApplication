@@ -7,7 +7,7 @@ package edu.bu.met.cs665.emailgeneration;
 
 public class EmailSenderService {
     /**
-     * his method extracts the subject and body from the EmailTemplate and uses them to send the email to the intended recipients.
+     * This method extracts the subject and body from the EmailTemplate and uses them to send the email to the intended recipients.
      * @param email The EmailTemplate object containing the email content to be sent.
      */
     public void sendEmail(EmailTemplate email) {

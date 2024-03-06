@@ -9,6 +9,7 @@ package edu.bu.met.cs665.emailgeneration;
 public class BusinessCustomer extends EmailTemplate {
 
     public BusinessCustomer() {
+
         super("Business Customer");
     }
 
